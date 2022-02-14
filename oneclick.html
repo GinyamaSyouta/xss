@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">    
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>ワンクリック詐欺体験サイト</title>
+    <script>
+        alert("ようこそワンクリック詐欺体験サイトへ");
+        var after = new Date();
+        after.setDate(after.getDate() + 7);
+        var msg1;
+        msg1 = ("[重要]一週間後の" + (after.getMonth() + 1) + "月" + after.getDate()
+                + "日までに本ページ最下部に記載されている口座へ精算時に指定される金額をお振り込みください[重要]");    
+        var msg2 = 0;  
+        var nowDay = (after.getMonth() + 1) + "月" + after.getDate() + "日"
+
+        //var text = document.getElementById("text");
+        //text.innerHTML = msg1;
+
+    </script>
+    
+</head>
+
+<style>
+    #link {
+    position: absolute;
+    top: 10px;
+    left: 1150px;
+    font-size: 230%;
+    color: aqua;
+  }
+#text {
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    color: yellow;
+    font-size: 130%;
+}
+#text2 {
+    margin: 20px;
+    font-size: 150%;
+}
+body {
+    background-color: black;
+    color: white;
+}
+h1 {
+    color: yellow;
+    font-size: 300%;
+}
+select {
+    width: 10cm;
+    height: 1cm;
+    font-size: 200%;
+    margin-top: 0cm;
+}
+#planBox {
+    overflow: hidden;
+    clear: both;
+}
+#plans {
+    float: left;
+}
+#r {
+    float: right;
+    font-size: 250%;
+    margin-right: 120px;
+    margin-top: 60px;
+}
+#planBox img {
+    float: left;
+    height: 350px;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+#text3 {
+    margin: 20px;
+    font-size: 150%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+#spBox {
+    overflow: hidden;
+    clear: both;
+}
+#spA {
+    float: left;
+    font-size: 135%;
+    margin-left: 50px;
+    color: greenyellow;
+}
+#spATitle {
+    font-size: 150%;
+    color: green;
+}
+#spB {
+    float: right;
+    font-size: 135%;
+    margin-right: 30px;
+    color: orange;
+}
+#spBTitle {
+    font-size: 150%;
+    color: orangered;
+}
+#subA {
+    height: 15px;
+    width: 60px;
+    font-size: 200%;
+}
+#subB {
+    margin-left: 100px;
+    height: 15px;
+    width: 60px;
+}
+#subText {
+    font-size: 150%;
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+#text4 {
+    margin: 20px;
+    font-size: 180%;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: yellow;
+}
+#btn {
+    height: 80px;
+    width: 250px;
+    font-size: 250%;
+    background-color: blue;
+    margin-left: 600px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+#lastText {
+    text-align: center;
+    font-size: 200%;
+    margin: 30px;
+    background-color: white;
+    color: red;
+}
+</style>
+
+<body>
+    <h1>新規会員登録が完了いたしました</h1>
+    <a href="toppage.html" id="link">トップページへ戻る</a>
+    <div id="text">&nbsp;</div>
+    <div id="text2">↓ご希望のプランをお選び下さい</div>
+
+    <div id="planBox">
+    <form name="plan">
+        <select id="plans" >
+            <option value="pA">ノーマルプラン</option>
+            <option value="pB">リッチプラン</option>
+            <option value="pC">チーププラン</option>
+        </select>
+       
+    </form>
+    <p id="r">もっともスタンダードなプランです。<br>さあ、幸せになるために頑張りましょう。<br>月額&nbsp;&nbsp;&nbsp;：100,000¥<br>入会費：200,000¥              
+              </p>
+    <p id="imgs"><img src="images/img1.jpeg" alt="ダイヤモンド" onclick="changeImg()" id="planImg"></p>
+    </div>
+    
+    <div id="text3">こちらのサブプランもいかがですか？</div>
+    <div id="spBox">
+        <p id="spA"><span id="spATitle">サブプランA カートゥーンエンジョイプラン</span><br><br>月に追加で 50,000¥ 支払うことで漫画やアニメ<br>(違法ダウンロード)が無料で見放題！<br><br>※原作者様の許可はとっておりません<br>&nbsp;&nbsp;&nbsp;違法のため万が一のことがあっても<br>&nbsp;&nbsp;&nbsp;責任は負いかねます。</p>
+        <p id="spB"><span id="spBTitle">サブプランB ゲームソフトエンジョイプラン</span><br><br>入会費に追加で 100,000¥ 支払うことでご希望のソフト<br>(違法コピー品)を10本プレゼント！<br><br>※ソフトコピーの許可はとっておりません<br>&nbsp;&nbsp;&nbsp;違法のため万が一のことがあっても<br>&nbsp;&nbsp;&nbsp;責任は負いかねます。</p>
+    </div>
+
+    <div id="subText">利用したいサブプラン名にチェックを入れてください( 複数選択可 )</div>
+    <form name="subs" id="subPlans">
+        <label><input type="checkbox" name="sub" id="subA" value="subA">サブプランA</label>
+        <label><input type="checkbox" name="sub" id="subB" value="subB">サブプランB</label>
+    </form>
+
+    <div id="text4">プラン、サブプランの選択が完了したら精算ボタンを押してください</div>
+
+    <div id="moneyBtn"><input type="button" value="精算" id="btn"></div>
+    <div id="lastText">ここに金額が表示されます</div>
+
+
+
+
+
+
+
+
+    <!-- 以下script -->
+    <script>
+        var imgNum = 1;
+        var planX = 1;
+
+        function changeImg() {
+            document.getElementById("planImg").src = "images/img" + imgNum + ".jpeg";
+        }
+        var planN = document.getElementById("plans");
+        var num = 0;
+        planN.onchange = function() {
+            num = 5;
+        }
+        planN.onchange = function() {
+            var pN = this.value; 
+            switch (pN) {
+                case "pA":
+                    num = "もっともスタンダードなプランです。<br>さあ、幸せになるために頑張りましょう。<br>月額&nbsp;&nbsp;&nbsp;：100,000¥<br>入会費：200,000¥ ";
+                    imgNum = 1;
+                    changeImg();
+                    planX = 1;
+                    break;
+                case "pB":
+                    num = "お金持ちな方へのプランです。<br>全財産を惜しみなく振り込みましょう。<br>月額&nbsp;&nbsp;&nbsp;：500,000¥<br>入会費：1,000,000¥ ";
+                    imgNum = 2;
+                    changeImg();
+                    planX = 2;
+                    break;
+                case "pC":
+                    num = "金銭的に余裕のない方へのプランです。<br>ほんの少しずつでも振り込みましょう。<br>月額&nbsp;&nbsp;&nbsp;：20,000¥<br>入会費：50,000¥ ";
+                    imgNum = 3;
+                    changeImg();
+                    planX = 3;
+                    break;
+            }
+            var readN = document.getElementById("r");
+            readN.innerHTML = num;
+            }
+
+
+        var btn = document.getElementById("btn");
+        var checkA = document.getElementsByName("sub");
+        //var checkB = document.sub.subB.checked;
+        var subA = 0;
+        var subB = 0;
+        var monthMoney;
+        var firstMoney;
+        btn.onclick = function() {
+            alert("期日までに振り込みが確認できなかった場合には法的措置を取らせていただきます");
+            if (checkA[0].checked) {
+                subA = 1;
+            } else {
+                subA = 0;
+            }
+            if (checkA[1].checked) {
+                subB = 1;
+            } else {
+                subB = 0;
+            }//チェックボックス判定
+
+            switch (planX) {
+                case 1:
+                    monthMoney = 100000;
+                    break
+                case 2:
+                    monthMoney = 500000;
+                    break
+                case 3:
+                    monthMoney = 20000;
+                    break
+            }
+            if (subA == 1) monthMoney += 50000;
+            //月額決定
+
+            switch (planX) {
+                case 1:
+                    firstMoney = 200000;
+                    break
+                case 2:
+                    firstMoney = 1000000;
+                    break
+                case 3:
+                    firstMoney = 50000;
+                    break
+            }
+            if (subB == 1) firstMoney += 100000
+
+            var lastMsg = "月額：" + monthMoney + "¥<br>" + "入会費：" + firstMoney + "¥<br>" + "一ヶ月分の月額と入会費を合わせて" + (firstMoney + monthMoney) + "¥を<br>" + nowDay + "( 一週間後 )までに○○銀行の口座番号xxxx-xxxxへお振り込みください。" ;
+            var lastText = document.getElementById("lastText");
+            lastText.innerHTML = lastMsg;
+        }
+        var text = document.getElementById("text");
+        text.innerHTML = msg1;
+    </script>
+</body>
+</html>
